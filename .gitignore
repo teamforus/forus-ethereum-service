@@ -3,7 +3,7 @@
 !/data
 !/logs
 .env.js
-./.idea
+/.idea
 
 # Compiled source #
 ###################
