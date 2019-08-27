@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "e73c6ad3-2ee2-40f0-97f7-6734ecc59ebb",
+		"name": "forus.ethereum-service-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transactions",
+			"description": "",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Api-Key",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"transaction\": {\n\t\t\"from\" : \"0x051eB597f6195E4646500A6072e9FeD7d4380b09\",\n\t\t\"to\": \"0x144ec7fd79B261c88f77ed94eDE59d9E41168a91\",\n\t\t\"value\" : 0.001\n\t},\n\t\"private\": \"secret\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "360f4717-4e81-4047-b726-ca84f9f5ac5b",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Api-Key",
+										"value": "{{apiKey}}",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"transaction\": {\n\t\t\"from\" : \"0x051eB597f6195E4646500A6072e9FeD7d4380b09\",\n\t\t\"to\": \"0x144ec7fd79B261c88f77ed94eDE59d9E41168a91\",\n\t\t\"value\" : 0.001\n\t},\n\t\"private\": \"secret\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8500/api/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8500",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "944",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2019 07:30:44 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b0-QSYLfDstTB36V6zMllrnKlGh7wE\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"account\":{\"blockHash\":\"0xf6dfc20478d3c3d115bc4f4c454636dd79deff5ae8012bc838f6497a482fad58\",\"blockNumber\":4983497,\"contractAddress\":null,\"cumulativeGasUsed\":21000,\"from\":\"0x051eb597f6195e4646500a6072e9fed7d4380b09\",\"gasUsed\":21000,\"logs\":[],\"logsBloom\":\"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"status\":true,\"to\":\"0x144ec7fd79b261c88f77ed94ede59d9e41168a91\",\"transactionHash\":\"0x36ee331ef4d784f50c2901006be2dbd097db56cd0787e75bff55e106e6dcf8fa\",\"transactionIndex\":0}}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "accounts",
+			"description": "",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Api-Key",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"passphrase\" : \"c31bab451199dc0f55002189e18860a94a8790a93ff1f04ab0492694d45dc19o\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "574a8c78-dec2-46b9-820c-9a6a7abbf6c3",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Api-Key",
+										"value": "{{apiKey}}",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"passphrase\" : \"c31bab451199dc0f55002189e18860a94a8790a93ff1f04ab0492694d45dc19o\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8500/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8500",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2019 07:41:25 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-caleRecRpkWYBwp5GK7Yt6bPYNY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"account\":{\"address\":\"0xa12bdf421D594353b3BB3697B231a5B1fF5f8f35\",\"privateKey\":\"0x8ce34ff9ccbae1be981432a32683fbe926cb171e2fb80293933420b5f2b7e24f\"}}"
+						}
+					]
+				},
+				{
+					"name": "balance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Api-Key",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/accounts/0x144ec7fd79B261c88f77ed94eDE59d9E41168a91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"accounts",
+								"0x144ec7fd79B261c88f77ed94eDE59d9E41168a91"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "f4a6e47e-2208-4743-8127-5e9a57acfff7",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Api-Key",
+										"value": "{{apiKey}}",
+										"disabled": false
+									},
+									{
+										"key": "",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8500/api/accounts/0x144ec7fd79B261c88f77ed94eDE59d9E41168a91",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8500",
+									"path": [
+										"api",
+										"accounts",
+										"0x144ec7fd79B261c88f77ed94eDE59d9E41168a91"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Aug 2019 07:41:50 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13-I9ooyHBFILFGppsjIRJ7YTk60wE\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"balance\":\"0.011\"}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "189acaa8-1178-41d8-b706-50f98c027dab",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c517dbc4-8ce6-4308-beea-9ff840a77786",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "371c0f7f-7a4d-4bff-b2fe-5e791239f456",
+			"key": "apiKey",
+			"value": "Upa82GHScBh28GUgeGXaRYwF78psuGbVDPJU8dNtchrZeFsZUT3hTFugJ4ch6ZXP",
+			"type": "string",
+			"description": ""
+		}
+	]
+}

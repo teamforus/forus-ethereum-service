@@ -2,22 +2,21 @@
   "name": "ethereum",
   "version": "1.0.0",
   "description": "",
-  "main": "helpers.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./server/bin/server.js",
-    "compileanddeploy": "node ./server/bin/compile-contracts.js && node ./server/bin/deploy-contracts.js",
+    "start": "node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "color": "^2.0.0",
     "colors": "^1.1.2",
+    "ethereumjs-tx": "^2.1.0",
     "express": "^4.15.4",
-    "solc": "^0.4.16",
-    "tail": "^1.2.2",
-    "underscore": "^1.8.3",
-    "web3": "^1.2.0"
+    "keythereum": "^1.0.4",
+    "moment": "^2.24.0",
+    "sprintf-js": "^1.1.2",
+    "web3": "^1.2.1"
   }
 }
