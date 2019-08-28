@@ -25,7 +25,7 @@ const AccountsController = function() {
      */
     this.balance = async (req, res) => {
         try {
-            res.status(201).send({
+            res.status(200).send({
                 balance: await AccountService.balance(req.params.address)
             });
         } catch (error) {

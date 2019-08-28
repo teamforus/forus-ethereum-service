@@ -13,7 +13,7 @@ const TransactionsController = function() {
         const transaction = req.body.transaction;
         
         try {
-            res.status(201).send({
+            res.status(200).send({
                 account: await TransactionsService.store(transaction, private)
             });
         } catch (error) {
